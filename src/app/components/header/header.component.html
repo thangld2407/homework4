@@ -1,0 +1,32 @@
+<div class="invoice-header">
+  <div class="row">
+    <div class="col-6 card-infor">
+      <img [src]="Customer.logo" alt="" class="card-avt">
+      <h4>{{ Customer.from }}</h4>
+      <div class="infor-footer">
+        <div class="bill">
+          <span>Bill to: </span>
+          <b>{{Customer.bill_to}}</b>
+        </div>
+        <div class="address">
+          <span>Address: </span>
+          <b>{{Customer.address}}</b>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 invoice-right">
+      <h3>INVOICE</h3>
+      <span>#{{Customer.id}}</span>
+      <div class="show-content">
+        <div class="row date">
+          <div class="col">Date</div>
+          <div class="col">{{Customer.date}}</div>
+        </div>
+        <div class="row due">
+          <div class="col">Balance Due</div>
+          <div class="col">${{totalBalance}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
